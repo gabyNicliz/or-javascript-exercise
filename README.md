@@ -1,5 +1,9 @@
 # or-javascript-exercise
 
-npm install to install dependencies
+On the command prompt:
 
-npm start to run project.
+In the project root to install depencencies:
+  npm install
+
+To run project:
+  npm start
