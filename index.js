@@ -33,10 +33,12 @@ for (let vehicle of vehiclesList) {
 
 console.log('=============================');
 
-let mostExpensiveVehicle = concessionarie.getMostExpensiveVehicle();
+let sortedList = concessionarie.getVehiclesListInDecreasingOrder();
+
+let mostExpensiveVehicle = sortedList[0]
 console.log('Vehículo más caro: ' + mostExpensiveVehicle.getBrand(), mostExpensiveVehicle.getModel());
 
-let cheapestVehicle = concessionarie.getCheapestVehicle();
+let cheapestVehicle = sortedList[sortedList.length - 1];
 console.log('Vehículo más barato: ' + cheapestVehicle.getBrand(), cheapestVehicle.getModel());
 
 let vehicle = concessionarie.findVehicleByLetterInModel('Y');
@@ -44,8 +46,6 @@ let formatedPrice = '' + vehicle.getPrice().toFixed(2).replace(/(\d)(?=(\d{3})+(
 console.log('Vehículo que contiene en el modelo la letra ‘Y’: ' 
 + vehicle.getBrand() + ' ' + vehicle.getModel() 
 + ' $' + formatedPrice);
-
-let sortedList = concessionarie.getVehiclesListInDecreasingOrder();
 
 console.log('=============================');
 

@@ -20,30 +20,6 @@ export default function Concessionarie() {
     return listToSort;
   }
 
-  this.getMostExpensiveVehicle = function() {
-    let mostExpensiveVehicle = this.vehiclesList[0];
-
-    for (let i = 1; i < this.vehiclesList.lenght; i++) {
-      if (mostExpensiveVehicle.gePrice() < this.vehiclesList[i]) {
-        mostExpensiveVehicle = vehiclesList[i];
-      }
-    }
-
-    return mostExpensiveVehicle;
-  }
-
-  this.getCheapestVehicle = function() {
-    let cheapestVehicle = this.vehiclesList[0];
-
-    for (let i = 1; i < this.vehiclesList.lenght; i++) {
-      if (cheapestVehicle.gePrice() > this.vehiclesList[i]) {
-        cheapestVehicle = vehiclesList[i];
-      }
-    }
-
-    return cheapestVehicle;
-  }
-
   this.findVehicleByLetterInModel = function(letter) {
     for (let vehicle of this.vehiclesList) {
       if (vehicle.getModel().includes(letter)) return vehicle;
